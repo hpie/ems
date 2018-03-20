@@ -22,7 +22,7 @@ class Job_post extends MY_Controller {
 		$crud = new grocery_CRUD();
 			$crud->set_theme('datatables');
 			$crud->set_table('job_postings');
-			$crud->columns('job_code','department_code',  'job_title', 'job_description', 'job_ref_document', 'job_post_dt', 'job_last_dt', 'job_expire_dt', 
+			$crud->columns('job_code','department_code',  'job_title', 'job_ref_document', 
 		               'job_status', 'status');
 
 			$crud->unset_add();
@@ -31,7 +31,7 @@ class Job_post extends MY_Controller {
 
 			//print_r($output);
 			//$this->_example_output($output);
-			$this->load->view('center/index.php',(array)$output);
+			$this->load->view('job_interview/index.php',(array)$output);
 	}
 public function _example_output($output = null)
 	{

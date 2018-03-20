@@ -23,8 +23,7 @@ class Job_schedule extends MY_Controller {
 		$crud = new grocery_CRUD();
 			$crud->set_theme('datatables');
 			$crud->set_table('job_interview_schedules');
-			$crud->columns('job_code','department_code','center_code','interview_dt', 'interview_start_time', 'interview_end_time', 'interview_report_time', 
-		               'job_last_dt', 'job_expire_dt', 'interview_close_time','interview_schedule_status','interview_schedule_comments', 'status');
+			$crud->columns('job_code','department_code','center_code','interview_schedule_comments', 'status');
 		
 
 			$crud->unset_add();
@@ -33,7 +32,7 @@ class Job_schedule extends MY_Controller {
 			
 			//print_r($output);
 			//$this->_example_output($output);
-			$this->load->view('center/index.php',(array)$output);
+			$this->load->view('job_interview/index.php',(array)$output);
 	}
 public function _example_output($output = null)
 	{

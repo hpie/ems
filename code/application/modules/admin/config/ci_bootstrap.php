@@ -82,6 +82,30 @@ $config['ci_bootstrap'] = array(
 				'List'			=> 'center',
 			)
 		),
+		'Job Interveiw Schedule' => array(
+			'name'		=> 'Interview Schedule',
+			'url'		=> 'interview_schedule',
+			'icon'		=> 'ion ion-edit',
+			'children'  => array(
+				'List'			=> 'interview_schedule',
+			)
+		),
+		'Job Posting' => array(
+			'name'		=> 'Job Posting',
+			'url'		=> 'job_posting',
+			'icon'		=> 'ion ion-edit',
+			'children'  => array(
+				'List'			=> 'job_posting',
+			)
+		),
+		'Job Keywords' => array(
+			'name'		=> 'Job Keyword',
+			'url'		=> 'keyword',
+			'icon'		=> 'ion ion-edit',
+			'children'  => array(
+				'List'			=> 'keyword',
+			)
+		),
 		/*'atc' => array(
 			'name'		=> 'ATC',
 			'url'		=> 'atc',
