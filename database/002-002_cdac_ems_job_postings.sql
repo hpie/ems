@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `job_postings` (
   `department_code` varchar(20) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Deparment for which the Job is posted FK from ems_departments master',
   `job_title` varchar(50) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Title for the job',
   `job_description` varchar(1000) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Details of Job',
+  `job_salary_range` varchar(10) COLLATE utf8_unicode_ci NULL COMMENT 'Salary range - can also be NA',
   `job_ref_document` varchar(50) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Uploaded document for the posted Job',
   `job_post_dt` date NOT NULL COMMENT 'Date job was posted',  
   `job_last_dt` date NOT NULL COMMENT 'Last date for submission of application',
