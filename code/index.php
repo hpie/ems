@@ -20,7 +20,7 @@ define('DEFAULT_LANG', 'en');
  * as this file.
  *
  */
-$system_path = 'System';
+$system_path = 'system';
 
 /*
  * ---------------------------------------------------------------
@@ -41,7 +41,7 @@ $application_folder = 'application';
  * NO TRAILING SLASH!
  *
  */
-$config_folder = 'Config';
+$config_folder = 'config';
 
 
 
@@ -53,7 +53,7 @@ $config_folder = 'Config';
  * NO TRAILING SLASH!
  *
  */
-$logs_folder = 'Logs';
+$logs_folder = 'logs';
 
 
 
@@ -65,7 +65,7 @@ $logs_folder = 'Logs';
  * NO TRAILING SLASH!
  *
  */
-$common_folder = 'Common';
+$common_folder = 'common';
 
 /*
  * ---------------------------------------------------------------
@@ -130,13 +130,13 @@ if (is_dir($application_folder)) {
 
 // Application dir root path
 define('APPLICATION_PATH', getcwd() . "/" . APPPATH);
-define('MVC_PATH', getcwd() . "/" . APPPATH."MVC/");
+define('MVC_PATH', getcwd() . "/" . APPPATH."mvc/");
 define('LOGS_PATH', getcwd() . "/" . APPPATH.$logs_folder);
-define('APP_INCLUDE',  APPPATH."MVC/");
-define('APP_INCLUDE_M',  APPPATH."MVC/Model/");
-define('APP_INCLUDE_V',  APPPATH."MVC/View/");
-define('APP_INCLUDE_C',  APPPATH."MVC/Controller/");
-define('APP_INCLUDE_Library',  APPPATH."Libraries/");
+define('APP_INCLUDE',  APPPATH."mvc/");
+define('APP_INCLUDE_M',  APPPATH."mvc/model/");
+define('APP_INCLUDE_V',  APPPATH."mvc/view/");
+define('APP_INCLUDE_C',  APPPATH."mvc/controller/");
+define('APP_INCLUDE_Library',  APPPATH."libraries/");
 /*
  * --------------------------------------------------------------------
  * INITIALISE application
