@@ -24,11 +24,11 @@ class login_m extends Models {
         }
         return false;
     }    
-    public function buyerLogin($email, $password) {
-        $q = "SELECT * FROM buyer WHERE buyer_email='$email' AND buyer_password='$password' AND buyer_mobileVerify=1 AND buyer_status=1";
+    public function userLogin($email, $password) {
+        $q = "SELECT * FROM user WHERE user_email='$email' AND user_password='$password'";
         $result = $this->query->select($q);
-        if ($row = $this->query->fetch($result)) {
-            if ($email == $row['buyer_email'] && $password == $row['buyer_password']) {                                               
+        if ($row = $this->query->fetch($result)) {                                                
+            if ($email == $row['user_email'] && $password == $row['user_password']) {                                               
                 sessionUser($row);
                 return true;
             }

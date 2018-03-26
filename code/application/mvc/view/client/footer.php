@@ -111,5 +111,28 @@
 <script type="text/javascript" src="<?php echo CLIENT_ASSETS; ?>js/contact-form-script.js"></script>    
 <script type="text/javascript" src="<?php echo CLIENT_ASSETS; ?>js/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript" src="<?php echo CLIENT_ASSETS; ?>js/jquery.themepunch.tools.min.js"></script>
+<script src="<?php echo CLIENT_ASSETS; ?>js/summernote.js" type="text/javascript"></script>
+<script src="<?php echo BASE_URL; ?>assets/pnotify/dist/pnotifyAdmin.js"></script>
+<script>
+    $(document).ready(function () {
+        if ('<?php
+if (isset($_SESSION['loginsuccess'])) {
+    echo $_SESSION['loginsuccess'];
+}
+?>' == '1') {
+            var d = new PNotify({
+                title: 'Login successfully',
+                type: 'success',
+                styling: 'bootstrap3'
+            });
+            '<?php echo $_SESSION['loginsuccess'] = 0; ?>';
+        }
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('#summernote').summernote();
+    });
+</script>
 </body>
 </html>

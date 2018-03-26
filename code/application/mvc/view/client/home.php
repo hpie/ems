@@ -63,10 +63,10 @@
             <div class="col-md-12">
                 <div class="job-list">
                     <div class="thumb">
-                        <a href="job-details.html"><img src="assets/img/jobs/img-1.jpg" alt=""></a>
+                        <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><img src="<?php echo CLIENT_ASSETS; ?>img/jobs/img-1.jpg" alt=""></a>
                     </div>
                     <div class="job-list-content">
-                        <h4><a href="job-details.html">Need a web designer</a><span class="full-time">Full-Time</span></h4>
+                        <h4><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Need a web designer</a><span class="full-time">Full-Time</span></h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                         <div class="job-tag">
                             <div class="pull-left">
@@ -80,17 +80,17 @@
                                 <div class="icon">
                                     <i class="ti-heart"></i>
                                 </div>
-                                <a href="job-details.html" class="btn btn-common btn-rm">More Detail</a>
+                                <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>" class="btn btn-common btn-rm">More Detail</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="job-list">
                     <div class="thumb">
-                        <a href="job-details.html"><img src="assets/img/jobs/img-2.jpg" alt=""></a>
+                        <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><img src="<?php echo CLIENT_ASSETS; ?>img/jobs/img-2.jpg" alt=""></a>
                     </div>
                     <div class="job-list-content">
-                        <h4><a href="job-details.html">Front-end developer needed</a><span class="full-time">Full-Time</span></h4>
+                        <h4><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Front-end developer needed</a><span class="full-time">Full-Time</span></h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                         <div class="job-tag">
                             <div class="pull-left">
@@ -104,17 +104,17 @@
                                 <div class="icon">
                                     <i class="ti-heart"></i>
                                 </div>
-                                <a href="job-details.html" class="btn btn-common btn-rm">More Detail</a>
+                                <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>" class="btn btn-common btn-rm">More Detail</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="job-list">
                     <div class="thumb">
-                        <a href="job-details.html"><img src="assets/img/jobs/img-3.jpg" alt=""></a>
+                        <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><img src="<?php echo CLIENT_ASSETS; ?>img/jobs/img-3.jpg" alt=""></a>
                     </div>
                     <div class="job-list-content">
-                        <h4><a href="job-details.html">Senior Accountant</a><span class="part-time">Part-Time</span></h4>
+                        <h4><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Senior Accountant</a><span class="part-time">Part-Time</span></h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                         <div class="job-tag">
                             <div class="pull-left">
@@ -128,17 +128,17 @@
                                 <div class="icon">
                                     <i class="ti-heart"></i>
                                 </div>
-                                <a href="job-details.html" class="btn btn-common btn-rm">More Detail</a>
+                                <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>" class="btn btn-common btn-rm">More Detail</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="job-list">
                     <div class="thumb">
-                        <a href="job-details.html"><img src="assets/img/jobs/img-4.jpg" alt=""></a>
+                        <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><img src="<?php echo CLIENT_ASSETS; ?>img/jobs/img-4.jpg" alt=""></a>
                     </div>
                     <div class="job-list-content">
-                        <h4><a href="job-details.html">Fullstack web developer needed</a><span class="full-time">Full-Time</span></h4>
+                        <h4><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Fullstack web developer needed</a><span class="full-time">Full-Time</span></h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
                         <div class="job-tag">
                             <div class="pull-left">
@@ -152,7 +152,7 @@
                                 <div class="icon">
                                     <i class="ti-heart"></i>
                                 </div>
-                                <a href="job-details.html" class="btn btn-common btn-rm">More Detail</a>
+                                <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>" class="btn btn-common btn-rm">More Detail</a>
                             </div>
                         </div>
                     </div>
@@ -207,12 +207,12 @@
                     <div class="featured-wrap">
                         <div class="featured-inner">
                             <figure class="item-thumb">
-                                <a class="hover-effect" href="job-page.html">
-                                    <img src="assets/img/features/img-1.jpg" alt="">
+                                <a class="hover-effect" href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">
+                                    <img src="<?php echo CLIENT_ASSETS; ?>img/features/img-1.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="item-body">
-                                <h3 class="job-title"><a href="job-page.html">Graphic Designer</a></h3>
+                                <h3 class="job-title"><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Graphic Designer</a></h3>
                                 <div class="adderess"><i class="ti-location-pin"></i> Dallas, United States</div>
                             </div>
                         </div>
@@ -221,7 +221,7 @@
                         <span><i class="ti-calendar"></i> 4 months ago</span>
                         <span><i class="ti-time"></i> Full Time</span>
                         <div class="view-iocn">
-                            <a href="job-page.html"><i class="ti-arrow-right"></i></a>
+                            <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -231,12 +231,12 @@
                     <div class="featured-wrap">
                         <div class="featured-inner">
                             <figure class="item-thumb">
-                                <a class="hover-effect" href="job-page.html">
-                                    <img src="assets/img/features/img-2.jpg" alt="">
+                                <a class="hover-effect" href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">
+                                    <img src="<?php echo CLIENT_ASSETS; ?>img/features/img-2.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="item-body">
-                                <h3 class="job-title"><a href="job-page.html">Software Engineer</a></h3>
+                                <h3 class="job-title"><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Software Engineer</a></h3>
                                 <div class="adderess"><i class="ti-location-pin"></i> Delaware, United States</div>
                             </div>
                         </div>
@@ -245,7 +245,7 @@
                         <span><i class="ti-calendar"></i> 5 months ago</span>
                         <span><i class="ti-time"></i> Part Time</span>
                         <div class="view-iocn">
-                            <a href="job-page.html"><i class="ti-arrow-right"></i></a>
+                            <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -255,12 +255,12 @@
                     <div class="featured-wrap">
                         <div class="featured-inner">
                             <figure class="item-thumb">
-                                <a class="hover-effect" href="job-page.html">
-                                    <img src="assets/img/features/img-3.jpg" alt="">
+                                <a class="hover-effect" href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">
+                                    <img src="<?php echo CLIENT_ASSETS; ?>img/features/img-3.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="item-body">
-                                <h3 class="job-title"><a href="job-page.html">Managing Director</a></h3>
+                                <h3 class="job-title"><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Managing Director</a></h3>
                                 <div class="adderess"><i class="ti-location-pin"></i> NY, United States</div>
                             </div>
                         </div>
@@ -269,7 +269,7 @@
                         <span><i class="ti-calendar"></i> 3 months ago</span>
                         <span><i class="ti-time"></i> Full Time</span>
                         <div class="view-iocn">
-                            <a href="job-page.html"><i class="ti-arrow-right"></i></a>
+                            <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -279,12 +279,12 @@
                     <div class="featured-wrap">
                         <div class="featured-inner">
                             <figure class="item-thumb">
-                                <a class="hover-effect" href="job-page.html">
-                                    <img src="assets/img/features/img-3.jpg" alt="">
+                                <a class="hover-effect" href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">
+                                    <img src="<?php echo CLIENT_ASSETS; ?>img/features/img-3.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="item-body">
-                                <h3 class="job-title"><a href="job-page.html">Graphic Designer</a></h3>
+                                <h3 class="job-title"><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Graphic Designer</a></h3>
                                 <div class="adderess"><i class="ti-location-pin"></i> Washington, United States</div>
                             </div>
                         </div>
@@ -293,7 +293,7 @@
                         <span><i class="ti-calendar"></i> 1 months ago</span>
                         <span><i class="ti-time"></i> Part Time</span>
                         <div class="view-iocn">
-                            <a href="job-page.html"><i class="ti-arrow-right"></i></a>
+                            <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -303,12 +303,12 @@
                     <div class="featured-wrap">
                         <div class="featured-inner">
                             <figure class="item-thumb">
-                                <a class="hover-effect" href="job-page.html">
-                                    <img src="assets/img/features/img-2.jpg" alt="">
+                                <a class="hover-effect" href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">
+                                    <img src="<?php echo CLIENT_ASSETS; ?>img/features/img-2.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="item-body">
-                                <h3 class="job-title"><a href="job-page.html">Software Engineer</a></h3>
+                                <h3 class="job-title"><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Software Engineer</a></h3>
                                 <div class="adderess"><i class="ti-location-pin"></i> Dallas, United States</div>
                             </div>
                         </div>
@@ -317,7 +317,7 @@
                         <span><i class="ti-calendar"></i> 6 months ago</span>
                         <span><i class="ti-time"></i> Full Time</span>
                         <div class="view-iocn">
-                            <a href="job-page.html"><i class="ti-arrow-right"></i></a>
+                            <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -327,12 +327,12 @@
                     <div class="featured-wrap">
                         <div class="featured-inner">
                             <figure class="item-thumb">
-                                <a class="hover-effect" href="job-page.html">
-                                    <img src="assets/img/features/img-1.jpg" alt="">
+                                <a class="hover-effect" href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">
+                                    <img src="<?php echo CLIENT_ASSETS; ?>img/features/img-1.jpg" alt="">
                                 </a>
                             </figure>
                             <div class="item-body">
-                                <h3 class="job-title"><a href="job-page.html">Managing Director</a></h3>
+                                <h3 class="job-title"><a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>">Managing Director</a></h3>
                                 <div class="adderess"><i class="ti-location-pin"></i> NY, United States</div>
                             </div>
                         </div>
@@ -341,7 +341,7 @@
                         <span><i class="ti-calendar"></i> 7 months ago</span>
                         <span><i class="ti-time"></i> Part Time</span>
                         <div class="view-iocn">
-                            <a href="job-page.html"><i class="ti-arrow-right"></i></a>
+                            <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$jobId; ?>"><i class="ti-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -380,7 +380,7 @@
                 <div class="blog-item-wrapper">
                     <div class="blog-item-img">
                         <a href="single-post.html">
-                            <img src="assets/img/blog/home-items/img1.jpg" alt="">
+                            <img src="<?php echo CLIENT_ASSETS; ?>img/blog/home-items/img1.jpg" alt="">
                         </a>                
                     </div>
                     <div class="blog-item-text">
@@ -407,7 +407,7 @@
                 <div class="blog-item-wrapper">
                     <div class="blog-item-img">
                         <a href="single-post.html">
-                            <img src="assets/img/blog/home-items/img2.jpg" alt="">
+                            <img src="<?php echo CLIENT_ASSETS; ?>img/blog/home-items/img2.jpg" alt="">
                         </a>                
                     </div>
                     <div class="blog-item-text">
@@ -434,7 +434,7 @@
                 <div class="blog-item-wrapper">
                     <div class="blog-item-img">
                         <a href="single-post.html">
-                            <img src="assets/img/blog/home-items/img3.jpg" alt="">
+                            <img src="<?php echo CLIENT_ASSETS; ?>img/blog/home-items/img3.jpg" alt="">
                         </a>                
                     </div>
                     <div class="blog-item-text">
@@ -466,21 +466,21 @@
         <div class="row">
             <div class="touch-slider" class="owl-carousel owl-theme">
                 <div class="item active text-center">  
-                    <img class="img-member" src="assets/img/testimonial/img1.jpg" alt=""> 
+                    <img class="img-member" src="<?php echo CLIENT_ASSETS; ?>img/testimonial/img1.jpg" alt=""> 
                     <div class="client-info">
                         <h2 class="client-name">Jessica <span>(Senior Accountant)</span></h2>
                     </div>
                     <p><i class="fa fa-quote-left quote-left"></i> The team that was assigned to our project... were extremely professional <i class="fa fa-quote-right quote-right"></i><br> throughout the project and assured that the owner expectations were met and <br> often exceeded. </p>
                 </div>
                 <div class="item text-center">
-                    <img class="img-member" src="assets/img/testimonial/img2.jpg" alt=""> 
+                    <img class="img-member" src="<?php echo CLIENT_ASSETS; ?>img/testimonial/img2.jpg" alt=""> 
                     <div class="client-info">
                         <h2 class="client-name">John Doe <span>(Project Menager)</span></h2>
                     </div>
                     <p><i class="fa fa-quote-left quote-left"></i> The team that was assigned to our project... were extremely professional <i class="fa fa-quote-right quote-right"></i><br> throughout the project and assured that the owner expectations were met and <br> often exceeded. </p>
                 </div>
                 <div class="item text-center">
-                    <img class="img-member" src="assets/img/testimonial/img3.jpg" alt=""> 
+                    <img class="img-member" src="<?php echo CLIENT_ASSETS; ?>img/testimonial/img3.jpg" alt=""> 
                     <div class="client-info">
                         <h2 class="client-name">Helen <span>(Engineer)</span></h2>
                     </div>
@@ -501,28 +501,28 @@
         <div class="row"> 
             <div id="clients-scroller">
                 <div class="items">
-                    <img src="assets/img/clients/img1.png" alt="">
+                    <img src="<?php echo CLIENT_ASSETS; ?>img/clients/img1.png" alt="">
                 </div>
                 <div class="items">
-                    <img src="assets/img/clients/img2.png" alt="">
+                    <img src="<?php echo CLIENT_ASSETS; ?>img/clients/img2.png" alt="">
                 </div>
                 <div class="items">
-                    <img src="assets/img/clients/img3.png" alt="">
+                    <img src="<?php echo CLIENT_ASSETS; ?>img/clients/img3.png" alt="">
                 </div>
                 <div class="items">
-                    <img src="assets/img/clients/img4.png" alt="">
+                    <img src="<?php echo CLIENT_ASSETS; ?>img/clients/img4.png" alt="">
                 </div>
                 <div class="items">
-                    <img src="assets/img/clients/img5.png" alt="">
+                    <img src="<?php echo CLIENT_ASSETS; ?>img/clients/img5.png" alt="">
                 </div>
                 <div class="items">
-                    <img src="assets/img/clients/img6.png" alt="">
+                    <img src="<?php echo CLIENT_ASSETS; ?>img/clients/img6.png" alt="">
                 </div>
                 <div class="items">
-                    <img src="assets/img/clients/img6.png" alt="">
+                    <img src="<?php echo CLIENT_ASSETS; ?>img/clients/img6.png" alt="">
                 </div>
                 <div class="items">
-                    <img src="assets/img/clients/img6.png" alt="">
+                    <img src="<?php echo CLIENT_ASSETS; ?>img/clients/img6.png" alt="">
                 </div>
             </div>
         </div>

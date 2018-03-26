@@ -29,6 +29,11 @@ define('ADMIN_DASHBOARD_LINK', BASE_URL ."dashboard");
 //***********************************************CLIENTE TITLE******************************************//
 define('HOME', "HOME");
 define('LOGIN', "LOGIN");
+define('JOB_DETAILS', "JOB-DETAILS");
+define('POST_JOB', "POST-JOB");
 //***********************************************CLIENTE SIDE LINK******************************************//
 define('CLIENT_LOGIN_FORM_LINK', BASE_URL ."account");
+define('CLIENT_LOGOUT_LINK', BASE_URL ."logout-client");
+define('CLIENT_JOB_DETAILS_LINK', BASE_URL ."job-details/");
+define('CLIENT_POST_JOB_LINK', BASE_URL ."post-job");
 ?>

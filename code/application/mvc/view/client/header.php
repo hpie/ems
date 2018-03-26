@@ -11,6 +11,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="<?php echo CLIENT_ASSETS; ?>img/favicon.png">
         <!-- Bootstrap CSS -->
+
         <link rel="stylesheet" href="<?php echo CLIENT_ASSETS; ?>css/bootstrap.min.css" type="text/css">    
         <link rel="stylesheet" href="<?php echo CLIENT_ASSETS; ?>css/jasny-bootstrap.min.css" type="text/css">  
         <link rel="stylesheet" href="<?php echo CLIENT_ASSETS; ?>css/bootstrap-select.min.css" type="text/css">  
@@ -34,9 +35,22 @@
         <!-- Responsive CSS Styles -->
         <link rel="stylesheet" href="<?php echo CLIENT_ASSETS; ?>css/responsive.css" type="text/css">
         <!-- Color CSS Styles  -->
+        <link href="<?php  echo CLIENT_ASSETS; ?>extras/summernote.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo CLIENT_ASSETS; ?>css/colors/red.css" media="screen" />
+        <link href="<?php echo CLIENT_ASSETS; ?>css/loginpopup.css" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo BASE_URL; ?>assets/pnotify/dist/pnotifiadmin.css" rel="stylesheet"> 
+        
+        
+        <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">-->
+         
+        <!--<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">-->
+        
+        <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+        <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+        <!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+        
     </head>
-    <body>  
+    <body>                      
         <!-- Header Section Start -->
         <div class="header">    
             <!-- Start intro section -->
@@ -62,7 +76,11 @@
                                         <a class="active" href="<?php echo BASE_URL; ?>">
                                             Home
                                         </a>                                        
-                                    </li>                                 
+                                    </li>
+                                    <?php
+                                    if(isset($_SESSION['user_type'])){
+                                        if($_SESSION['user_type']=='Employee'){
+                                    ?>
                                     <li>
                                         <a href="#">
                                             Employee <i class="fa fa-angle-down"></i>
@@ -95,13 +113,17 @@
                                             </li>
                                         </ul>
                                     </li>
+                                    <?php
+                                    }                                   
+                                    if($_SESSION['user_type']=='Department'){
+                                    ?>
                                     <li>
                                         <a href="#">
                                             Department <i class="fa fa-angle-down"></i>
                                         </a>
                                         <ul class="dropdown">
                                             <li>
-                                                <a href="post-job.html">
+                                                <a href="<?php echo CLIENT_POST_JOB_LINK; ?>">
                                                     Add Job
                                                 </a>
                                             </li>
@@ -121,11 +143,31 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    </li>                                   
+                                    </li> 
+                                    <?php
+                                    }
+                                    }
+                                    ?>
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right float-right">
-                                    <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
+                                    <?php
+                                    if(isset($_SESSION['user_id'])){
+                                        ?>
+                                    <li class="right"><a href="<?php echo CLIENT_LOGOUT_LINK; ?>"><i class="ti-lock"></i>  Logout</a></li>
+                                    <?php
+                                    }
+                                    else{
+                                        ?>
                                     <li class="right"><a href="<?php echo CLIENT_LOGIN_FORM_LINK; ?>"><i class="ti-lock"></i>  Log In</a></li>
+                                    <?php
+                                    }
+                                    if(isset($_SESSION['user_type'])){
+                                        if($_SESSION['user_type']=='Department'){
+                                        ?>
+                                    <li class="left"><a href="<?php echo CLIENT_POST_JOB_LINK; ?>"><i class="ti-pencil-alt"></i> Post A Job</a></li>
+                                    <?php
+                                    }}
+                                    ?>                                                                                                           
                                 </ul>
                             </div>                           
                         </div>

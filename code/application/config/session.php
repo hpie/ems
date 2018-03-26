@@ -53,11 +53,11 @@ function get_AdminName($name) {
     return FALSE;
 }
 function sessionUser($row) {
-    $_SESSION['buyer_id'] = $row['buyer_id'];
-    $_SESSION['buyer_email'] = $row['buyer_email'];
-    $_SESSION['buyer_profilepic'] = $row['buyer_profilepic'];
-    $_SESSION['buyer_mobileNo'] = $row['buyer_mobileNo'];
-    $_SESSION['buyer_name']=$row['buyer_firstname'];
+    $_SESSION['user_id'] = $row['user_id'];
+    $_SESSION['user_firstname'] = $row['user_firstname'];
+    $_SESSION['user_lastname'] = $row['user_lastname'];
+    $_SESSION['user_email'] = $row['user_email'];
+    $_SESSION['user_type']=$row['user_type'];
 }
 function getUserSession($field) {
     if (isset($_SESSION[$field])) {

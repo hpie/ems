@@ -25,13 +25,11 @@ class login_c extends Controllers {
         }
         loadLoginView('admin/', 'login.php', $this->data);
     }      
-    public function login() {
-        $error = '';
-        $_SESSION['valid'] = 0;
-        if (isset($_POST['email']) && isset($_POST['password'])) {
-            //echo 'hi';die;
-            $result = $this->login_m->login_select($_POST['email'], $_POST['password']);
-            if ($result == true) {                
+    public function login() {           
+        if (isset($_POST['email']) && isset($_POST['password'])) {                                           
+            $result = $this->login_m->userLogin($_POST['email'], $_POST['password']);
+            if ($result == true) { 
+                $_SESSION['loginsuccess'] = 1;
                 redirect(BASE_URL);                
             }
             if ($result == false) {
