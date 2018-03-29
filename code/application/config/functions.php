@@ -1,8 +1,8 @@
 <?php
 
-function dbDatetime($prefix) {
-    $_POST[$prefix . '_datetime'] = date('Y-m-d H:i:s');
-    $_POST[$prefix . '_date'] = date('Y-m-d');
+function createAndModifiedBy($userName) {
+    $_POST['created_by'] =$userName;
+    $_POST['modified_by'] = $userName;
     return $_POST;
 }
 
@@ -18,7 +18,7 @@ function dateFormatterComma($old_date) {
     //echo $old_date;
     $date = date_create($old_date);
     //echo "<pre>1=-".$old_date." ";print_r($date);
-    $new_date = date_format($date, "m,d,Y");
+    $new_date = date_format($date, "M d, Y");
     return $new_date;
 }
 

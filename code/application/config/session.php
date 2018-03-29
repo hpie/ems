@@ -25,12 +25,19 @@ function sessionCheck() {
     }
     return true;
 }
-function sessionCheckBuyer() {
-    if (!isset($_SESSION['buyer_id'])) {
-        redirect(BASE_URL);       
-        return false;
-    }
-    return true;
+function sessionCheckEmployee() {
+    if (!isset($_SESSION['user_type'])) {
+        if($_SESSION['user_type']!='Employee'){
+        redirect(BASE_URL.'0');         
+        }              
+    }  
+}
+function sessionCheckDepartment() {
+    if (!isset($_SESSION['user_type'])) {
+        if($_SESSION['user_type']!='Department'){
+            redirect(BASE_URL.'0');         
+        }              
+    }  
 }
 
 
@@ -58,6 +65,7 @@ function sessionUser($row) {
     $_SESSION['user_lastname'] = $row['user_lastname'];
     $_SESSION['user_email'] = $row['user_email'];
     $_SESSION['user_type']=$row['user_type'];
+    $_SESSION['refDepartment_code']=$row['refDepartment_code'];
 }
 function getUserSession($field) {
     if (isset($_SESSION[$field])) {

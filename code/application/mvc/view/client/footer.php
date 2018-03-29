@@ -114,7 +114,8 @@
 <script src="<?php echo CLIENT_ASSETS; ?>js/summernote.js" type="text/javascript"></script>
 <script src="<?php echo BASE_URL; ?>assets/pnotify/dist/pnotifyAdmin.js"></script>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function () {        
+        $("#<?php echo $offset.'joblist'; ?>").addClass( "activeLiA" );
         if ('<?php
 if (isset($_SESSION['loginsuccess'])) {
     echo $_SESSION['loginsuccess'];
@@ -127,11 +128,41 @@ if (isset($_SESSION['loginsuccess'])) {
             });
             '<?php echo $_SESSION['loginsuccess'] = 0; ?>';
         }
-    });
+   
+if ('<?php
+if (isset($_SESSION['jobAddedSuccessfully'])) {
+    echo $_SESSION['jobAddedSuccessfully'];
+}
+?>' == '1') {
+            var d = new PNotify({
+                title: 'Job added successfully',
+                type: 'success',
+                styling: 'bootstrap3'
+            });
+            '<?php echo $_SESSION['jobAddedSuccessfully'] = 0; ?>';
+        }
+ 
+    });   
 </script>
 <script>
     $(document).ready(function () {
-        $('#summernote').summernote();
+       
+        $('#summernote').summernote({
+            height: 200,
+            toolbar: [
+              // [groupName, [list of button]]
+              ['style', ['bold', 'italic', 'underline', 'clear']],
+              ['font', ['strikethrough', 'superscript', 'subscript']],
+              ['fontsize', ['fontsize']],
+              ['color', ['color']],
+              ['para', ['ul', 'ol', 'paragraph']],
+              ['height', ['height']],              
+            ],
+            disableDragAndDrop: true            
+          });
+          
+           $('.note-group-select-from-files').remove();
+        
     });
 </script>
 </body>

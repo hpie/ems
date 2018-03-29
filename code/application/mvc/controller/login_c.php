@@ -30,7 +30,7 @@ class login_c extends Controllers {
             $result = $this->login_m->userLogin($_POST['email'], $_POST['password']);
             if ($result == true) { 
                 $_SESSION['loginsuccess'] = 1;
-                redirect(BASE_URL);                
+                redirect(BASE_URL.'0');                
             }
             if ($result == false) {
                 $_SESSION['valid'] = 1;
@@ -45,7 +45,7 @@ class login_c extends Controllers {
     }
     public function logoutClient() {
         sessionDestroyUser();
-        redirect(BASE_URL);
+        redirect(BASE_URL.'0');
     }   
 }
 
