@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2018 at 20:30 PM
+-- Generation Time: Mar 29, 2018 at 12:44 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -17,10 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cdac_ems`
+-- Database: `cdac_ems2`
 --
-
-DROP TABLE IF EXISTS `ems_departments`;
 
 -- --------------------------------------------------------
 
@@ -49,6 +47,13 @@ CREATE TABLE IF NOT EXISTS `ems_departments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Dumping data for table `ems_departments`
+--
+
+INSERT INTO `ems_departments` (`department_code`, `department_title`, `department_description`, `department_address1`, `department_address2`, `department_city`, `department_state`, `department_zip`, `department_email`, `department_phone`, `department_contact_name`, `department_contact_designation`, `status`, `created_by`, `created_dt`, `modified_by`, `modified_dt`) VALUES
+('1', 'abc', 'asdsadd', 'sads', 'dads', 'sadd', 'dsa', '394310', 'd@gmail.com', '9099384773', 'lk', 'sr', 'open', '', '2018-03-29 06:00:30', NULL, '2018-03-29 06:00:30');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -58,4 +63,6 @@ CREATE TABLE IF NOT EXISTS `ems_departments` (
 ALTER TABLE `ems_departments`
   ADD PRIMARY KEY (`department_code`);
 
-
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
