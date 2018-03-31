@@ -9,7 +9,11 @@ class home_c extends Controllers {
         $this->home_m = $this->loadModel('home_m');
     }
     /******************************************** Shop Details *********************************** */
-    public function invoke($offset) {
+    public function invoke() {
+        redirect(BASE_URL.'home/0');
+    }
+    
+    public function home($offset) {
         $countRecord=$this->home_m->countPage();
         $totalPage=round(($countRecord/OFFSET),0,PHP_ROUND_HALF_UP);        
         $jobList=$this->home_m->getJobList($offset);
@@ -21,6 +25,7 @@ class home_c extends Controllers {
         $this->data['TITLE'] = HOME;      
         loadviewClient('client/', 'home.php', $this->data);
     }
+    
     public function jobDetails($jobId) { 
         $singleJob=$this->home_m->getSingleJobList($jobId);
         $this->data['singleJob'] = $singleJob;

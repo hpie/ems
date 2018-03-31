@@ -4,8 +4,8 @@ $route = array();
 //**************************CLIENT ROUTE*******************//
 $route['account'] = 'login_c/login';
 $route['logout-client'] = 'login_c/logoutClient';
-$route['(:any)'] = 'home_c';
-$route['home/(:any)'] = 'home_c';
+$route[''] = 'home_c';
+$route['home/(:any)'] = 'home_c/home';
 $route['job-details/(:any)'] = 'home_c/jobDetails';
 $route['post-job'] = 'department_c/postJob';
 $route['insert-job'] = 'department_c/addJob';

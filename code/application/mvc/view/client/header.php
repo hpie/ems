@@ -66,14 +66,14 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand logo" href="<?php echo BASE_URL.'0'; ?>"><img src="<?php echo CLIENT_ASSETS; ?>img/logo.png" alt=""></a>
+                                <a class="navbar-brand logo" href="<?php echo BASE_URL.'home/0'; ?>"><img src="<?php echo CLIENT_ASSETS; ?>img/logo.png" alt=""></a>
                             </div>
 
                             <div class="collapse navbar-collapse" id="navbar">              
                                 <!-- Start Navigation List -->
                                 <ul class="nav navbar-nav">
                                     <li>
-                                        <a class="active" href="<?php echo BASE_URL.'0'; ?>">
+                                        <a class="active" href="<?php echo BASE_URL.'home/0'; ?>">
                                             Home
                                         </a>                                        
                                     </li>

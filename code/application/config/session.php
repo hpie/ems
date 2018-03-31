@@ -28,14 +28,14 @@ function sessionCheck() {
 function sessionCheckEmployee() {
     if (!isset($_SESSION['user_type'])) {
         if($_SESSION['user_type']!='Employee'){
-        redirect(BASE_URL.'0');         
+        redirect(BASE_URL.'home/0');         
         }              
     }  
 }
 function sessionCheckDepartment() {
     if (!isset($_SESSION['user_type'])) {
         if($_SESSION['user_type']!='Department'){
-            redirect(BASE_URL.'0');         
+            redirect(BASE_URL.'home/0');         
         }              
     }  
 }

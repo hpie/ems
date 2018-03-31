@@ -103,16 +103,16 @@
                     <a href="#">Showing <span><?php echo $offset; ?>-<?php echo $offset2; ?></span> Of <?php echo $countRecord; ?> Jobs</a>
                 </div>                    
                 <ul class="pagination pull-right">              
-                    <li class="active"><a href="<?php echo BASE_URL.($offset-OFFSET).'#joblist'; ?>" class="btn btn-common" ><i class="ti-angle-left"></i> prev</a></li> 
+                    <li class="active"><a href="<?php echo BASE_URL.'home/'.($offset-OFFSET).'#joblist'; ?>" class="btn btn-common" ><i class="ti-angle-left"></i> prev</a></li> 
                     <?php 
                     $k=0;
                     for ($i=1;$i<=$totalPage;$i++){                        
                         ?>
-                    <li><a href="<?php echo BASE_URL.$k.'#joblist'; ?>" id="<?php echo $k.'joblist'; ?>"><?php echo $i; ?></a></li> 
+                    <li><a href="<?php echo BASE_URL.'home/'.$k.'#joblist'; ?>" id="<?php echo $k.'joblist'; ?>"><?php echo $i; ?></a></li> 
                     <?php
                     $k=$k+4;
                     } ?>                                       
-                    <li class="active"><a href="<?php echo BASE_URL.($offset+OFFSET).'#joblist'; ?>" class="btn btn-common">Next <i class="ti-angle-right"></i></a></li>
+                    <li class="active"><a href="<?php echo BASE_URL.'home/'.($offset+OFFSET).'#joblist'; ?>" class="btn btn-common">Next <i class="ti-angle-right"></i></a></li>
                 </ul>
             </div>
         </div>
