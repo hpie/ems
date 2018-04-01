@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class department_c extends Controllers {
 
-	 public function __construct() {
+	public function __construct() {
        	sessionCheck();
         //$this->Department_m = $this->loadModel('department_m');
         $this->common_m = $this->loadModel('common_m');
@@ -12,9 +12,7 @@ class department_c extends Controllers {
         $this->city_m = $this->loadModel('city_m');
         $this->status_m = $this->loadModel('status_m');
     }
-
-	// Frontend User CRUD
-	
+	// Frontend User CRUD	
 	public function add() {
         $states = $this->states_m->getState(); 
         $city = $this->city_m->getCity();
@@ -80,6 +78,5 @@ class department_c extends Controllers {
 
        	$result = $this->department_m->updatedepartment($_POST, $id);
        redirect(BASE_URL."department/index");
-       }
-	
+       }	
 }

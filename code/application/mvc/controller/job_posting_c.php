@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class job_posting_c extends Controllers {
 
-	 public function __construct() {
+	public function __construct() {
        	sessionCheck();
         $this->job_posting_m = $this->loadModel('job_posting_m');
         $this->common_m = $this->loadModel('common_m');

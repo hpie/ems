@@ -7,8 +7,8 @@ $route['logout-client'] = 'login_c/logoutClient';
 $route[''] = 'home_c';
 $route['home/(:any)'] = 'home_c/home';
 $route['job-details/(:any)'] = 'home_c/jobDetails';
-$route['post-job'] = 'department_c/postJob';
-$route['insert-job'] = 'department_c/addJob';
+$route['post-job'] = 'jobpost_c/postJob';
+$route['insert-job'] = 'jobpost_c/addJob';
 
 
 //**************************ADMIN ROUTE*******************//
