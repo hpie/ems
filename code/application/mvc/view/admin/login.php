@@ -51,7 +51,7 @@ var baseurl = '';
 				<h3>Invalid login</h3>
 				<p>Please Enter valid <strong> Username</strong>/<strong>Password</strong></p>
 			</div>			
-                        <form method="post" role="form" id="form_login">				
+           <form method="post" role="form" id="form_login" action="login/admin-login">				
 				<div class="form-group">					
 					<div class="input-group">
 						<div class="input-group-addon">

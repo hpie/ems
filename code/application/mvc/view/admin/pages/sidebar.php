@@ -59,16 +59,59 @@
 				<li class="has-sub">
 					<a href="#">
 						<i class="entypo-users"></i>
-						<span class="title">Customer</span>
+						<span class="title">STATE</span>
 					</a>
 					<ul>
 						<li>
-                                                    <a href="<?php echo MASTER_ADMIN_CUSTOMER_LIST_LIINK; ?>">
+                                <a href="<?php echo BASE_URL."state/index"; ?>">
 								<i class="entypo-lock-open"></i>
-								<span class="title">Customer List</span>
+								<span class="title">State List</span>
 							</a>
 						</li>											
 					</ul>
+
+				</li>
+				<li class="has-sub">
+					<a href="<?php echo BASE_URL."city/index"; ?>">
+						<i class="entypo-book"></i>
+						<span class="title">City</span>
+					</a>					
+				</li>
+				<li class="has-sub">
+					<a href="<?php echo BASE_URL."keyword/index"; ?>">
+						<i class="entypo-book"></i>
+						<span class="title">Keywords</span>
+					</a>					
+				</li>
+				<li class="has-sub">
+					<a href="<?php echo BASE_URL."department/index"; ?>">
+						<i class="entypo-book"></i>
+						<span class="title">Department</span>
+					</a>					
+				</li>
+				<li class="has-sub">
+					<a href="<?php echo BASE_URL."job_posting/index"; ?>">
+						<i class="entypo-book"></i>
+						<span class="title">Job Posting</span>
+					</a>					
+				</li>
+				<li class="has-sub">
+					<a href="<?php echo BASE_URL."job_interview/index"; ?>">
+						<i class="entypo-book"></i>
+						<span class="title">Job Interview Schedule</span>
+					</a>					
+				</li>
+				<li class="has-sub">
+					<a href="<?php echo BASE_URL."job_center/index"; ?>">
+						<i class="entypo-book"></i>
+						<span class="title">Job Center </span>
+					</a>					
+				</li>
+				<li class="has-sub">
+					<a href="<?php echo BASE_URL."admin/employee/index"; ?>">
+						<i class="entypo-book"></i>
+						<span class="title">Employee</span>
+					</a>					
 				</li>
 			</ul>
 			

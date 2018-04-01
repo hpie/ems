@@ -6,6 +6,12 @@ function createAndModifiedBy($userName) {
     return $_POST;
 }
 
+function dbDatetime($prefix) {
+    $_POST[$prefix . '_datetime'] = date('Y-m-d H:i:s');
+    $_POST[$prefix . '_date'] = date('Y-m-d');
+    return $_POST;
+}
+
 function dateFormatter($old_date) {
     //echo $old_date;
     $date = date_create($old_date);

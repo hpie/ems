@@ -73,7 +73,7 @@ INSERT INTO `job_postings` (`row_id`, `job_code`, `department_code`, `job_title`
 ALTER TABLE `job_postings`
   ADD PRIMARY KEY (`row_id`),
   ADD KEY `job_code` (`job_code`),
-  ADD KEY `job_postings_ibfk_1` (`department_code`);
+  ADD KEY `department_code` (`department_code`);
 
 --
 -- AUTO_INCREMENT for dumped tables
