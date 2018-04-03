@@ -32,4 +32,37 @@ class home_c extends Controllers {
         $this->data['TITLE'] = JOB_DETAILS;          
         loadviewClient('client/', 'jobdetails.php', $this->data);
     } 
+    public function applyJob($jobId) {  
+        $singleJob=$this->home_m->getSingleJobList($jobId);
+        
+//        echo '<pre>';print_r($singleJob);die;
+        $this->data['singleJob'] = $singleJob;
+        $this->data['TITLE'] = APPLY_JOB;          
+        loadviewClient('client/', 'applyjob.php', $this->data);
+    }
+    public function addApplyJob() {  
+        $_POST['candicate_code']=0;
+        $_POST['created_dt']=date('Y-m-d H:i:s');
+        $_POST['modified_dt']=date('Y-m-d H:i:s');
+        //echo '<pre>';print_r($_POST);die;
+        $applyJobCheck=$this->home_m->getSingleApplyJobDetails($_POST['job_code'],$_POST['candicate_email'],$_POST['candicate_phone']);
+//        echo '<pre>';print_r($applyJobCheck);die;
+        if(!empty($applyJobCheck)){
+             $_SESSION['AppllySuccessfully']=2;
+              redirect(BASE_URL.'home/0');
+        }else{
+        $result = $this->home_m->addApplyJob($_POST);
+        if($result){           
+            $params=array();
+            $params['candicate_code']='#CAN'.$result;
+            $this->home_m->addApplyJobCode($params,$result);
+            $_SESSION['AppllySuccessfully']=1;
+            redirect(BASE_URL.'home/0');
+        }
+        }
+//        else{
+//            $_SESSION['jobAddedSuccessfully']=2;
+//            redirect(CLIENT_POST_JOB_LINK);
+//        }
+    }
 }  

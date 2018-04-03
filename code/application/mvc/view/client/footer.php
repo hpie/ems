@@ -141,8 +141,36 @@ if (isset($_SESSION['jobAddedSuccessfully'])) {
             });
             '<?php echo $_SESSION['jobAddedSuccessfully'] = 0; ?>';
         }
+        
+        if ('<?php
+if (isset($_SESSION['AppllySuccessfully'])) {
+    echo $_SESSION['AppllySuccessfully'];
+}
+?>' == '1') {
+            var d = new PNotify({
+                title: 'Job apply successfully',
+                type: 'success',
+                styling: 'bootstrap3'
+            });
+            '<?php echo $_SESSION['AppllySuccessfully'] = 0; ?>';
+        }else if('<?php
+if (isset($_SESSION['AppllySuccessfully'])) {
+    echo $_SESSION['AppllySuccessfully'];
+}
+?>' == '2'){
+            var d = new PNotify({
+                title: 'You have allready apply on this job',
+                type: 'info',
+                styling: 'bootstrap3'
+            });
+            '<?php echo $_SESSION['AppllySuccessfully'] = 0; ?>';
+        }
  
     });   
+    
+    
+ 
+  
 </script>
 <script>
     $(document).ready(function () {

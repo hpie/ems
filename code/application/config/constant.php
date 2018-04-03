@@ -32,10 +32,14 @@ define('OFFSET', "4");
 define('LOGIN', "LOGIN");
 define('JOB_DETAILS', "JOB-DETAILS");
 define('POST_JOB', "POST-JOB");
+define('APPLY_JOB', "APPLY-JOB");
 //***********************************************CLIENTE SIDE LINK******************************************//
 define('CLIENT_LOGIN_FORM_LINK', BASE_URL ."account");
 define('CLIENT_LOGOUT_LINK', BASE_URL ."logout-client");
 define('CLIENT_JOB_DETAILS_LINK', BASE_URL ."job-details/");
 define('CLIENT_POST_JOB_LINK', BASE_URL ."post-job");
 define('CLIENT_INSERT_POST_JOB_LINK', BASE_URL ."insert-job");
+
+define('APPLY_JOB_FORM_LINK', BASE_URL ."apply-job/");
+define('INSERT_APLLY_JOB_LINK', BASE_URL ."insert-apply-job");
 ?>

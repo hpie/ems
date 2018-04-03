@@ -10,6 +10,9 @@ $route['job-details/(:any)'] = 'home_c/jobDetails';
 $route['post-job'] = 'jobpost_c/postJob';
 $route['insert-job'] = 'jobpost_c/addJob';
 
+$route['apply-job/(:any)'] = 'home_c/applyJob';
+$route['insert-apply-job'] = 'home_c/addApplyJob';
+
 
 //**************************ADMIN ROUTE*******************//
 $route['login'] = 'login_c';

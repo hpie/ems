@@ -77,7 +77,7 @@
                                 <li><i class="ti-check-box"></i>Must have minimum of 3 years experience running, maneuvering, driving, and navigating equipment such as bulldozer, excavators, rollers, and front-end loaders.</li>
                                 <li><i class="ti-check-box"></i>Strongly prefer candidates with High School Diploma</li>
                             </ul>
-                            <a href="#" class="btn btn-common">Apply for this Job Now</a>
+                            <a href="<?php echo APPLY_JOB_FORM_LINK.$singleJob['row_id']; ?>" class="btn btn-common">Apply for this Job Now</a>
                         </div>
                     </div>
                 </div>
