@@ -48,9 +48,9 @@ function sessionDestroy() {
     session_destroy();   
 }
 function sessionAdmin($row) {
-    $_SESSION['admin_id'] = $row['id'];
-    $_SESSION['admin_name'] = $row['username'];
-    $_SESSION['admin_email'] = $row['email'];     
+    $_SESSION['admin_id'] = $row['admin_id'];
+    $_SESSION['admin_name'] = $row['admin_firstName'];
+    $_SESSION['admin_email'] = $row['admin_email'];     
 }
 function get_AdminName($name) {
     if (isset($_SESSION[$name])) {

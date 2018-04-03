@@ -14,10 +14,10 @@ class login_m extends Models {
         
     }
     public function login_select($email, $password) {
-        $q = "SELECT * FROM admin_users WHERE email='$email' and password='$password'";
+        $q = "SELECT * FROM admin WHERE admin_email='$email' and admin_password='$password'";
         $result = $this->query->select($q);
         if ($row = $this->query->fetch($result)) {
-            if ($email == $row['email'] && $password == $row['password']) {                                               
+            if ($email == $row['admin_email'] && $password == $row['admin_password']) {                                               
                 sessionAdmin($row);
                 return true;
             }
