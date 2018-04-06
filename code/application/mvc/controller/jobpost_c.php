@@ -12,9 +12,13 @@ class jobpost_c extends Controllers {
     public function invoke() {
         
     }
-    public function postJob() {        
+    public function postJob() { 
+        if($_SESSION['user_type'] == 'Department'){
         $this->data['TITLE'] = POST_JOB;          
         loadviewClient('client/', 'postjob.php', $this->data);
+        }else{
+            redirect(BASE_URL.'home/0');
+        }
     }
     public function addJob() {  
         createAndModifiedBy($_SESSION['user_id']);

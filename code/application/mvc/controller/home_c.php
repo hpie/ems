@@ -10,13 +10,24 @@ class home_c extends Controllers {
     }
     /******************************************** Shop Details *********************************** */
     public function invoke() {
+        
+        
         redirect(BASE_URL.'home/0');
     }
     
     public function home($offset) {
+        if(isset($_COOKIE['FAV_JOB'])){
+            $cookie_value = $_COOKIE['FAV_JOB'];
+        }else{
+        $cookie_name = "FAV_JOB";
+        $cookie_value = "JOBFAV".rand();
+        $set = setcookie($cookie_name, $cookie_value, time() + (8640000 * 30), "/"); // 86400 = 1 day
+        }
+//        echo $set;die;
         $countRecord=$this->home_m->countPage();
         $totalPage=round(($countRecord/OFFSET),0,PHP_ROUND_HALF_UP);        
-        $jobList=$this->home_m->getJobList($offset);
+        $jobList=$this->home_m->getJobList($offset,$cookie_value);
+//        echo"<pre>";print_r($jobList);die;
         $this->data['jobList'] = $jobList;
         $this->data['totalPage'] = $totalPage;
         $this->data['countRecord'] = $countRecord;
@@ -64,5 +75,27 @@ class home_c extends Controllers {
 //            $_SESSION['jobAddedSuccessfully']=2;
 //            redirect(CLIENT_POST_JOB_LINK);
 //        }
+    }
+    
+    public function add_fav_job($jobId) { 
+        
+        $singleJob=$this->home_m->getSingleJobList($jobId);
+        $getcookie = $_COOKIE['FAV_JOB'];
+        if($_POST['type'] == 'fav'){
+        $params = array();
+        $params['job_code'] = $singleJob['job_code'];
+        $params['favkey'] = $getcookie;
+        $params['updates'] = date('Y-m-d H:i:s');
+        $params['datetime'] = date('Y-m-d H:i:s');
+        $insert =$this->home_m->addFavouriteJob($params);
+        }else{
+             $insert =$this->home_m->deleteFavouriteJob($singleJob['job_code'],$getcookie);
+        }
+        if($insert){
+            $result=array(); 
+        $result['success'] = 'success';
+        echo json_encode($result);
+        die;  
+        }
     }
 }  

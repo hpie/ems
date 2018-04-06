@@ -1,6 +1,6 @@
 ﻿<!-- Page Header Start change -->
 
-<div class="page-header" style="background: url(assets/img/banner1.jpg);">
+<div class="page-header" style="background: url(assets/img/banner1.jpg); border-top:0">
     <div class="container">
         <div class="row">         
             <div class="col-md-12">

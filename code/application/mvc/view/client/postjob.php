@@ -34,7 +34,7 @@
                             <textarea id="summernote" name="job_description"></textarea>                           
                         </section>
                         <div class="form-group is-empty">
-                            <label class="control-label">Sallery Range</label>
+                            <label class="control-label">Salary Range</label>
                             <input class="form-control" placeholder="e.g. ₹15,000 - ₹20,000 Per Month/Year" type="text" name="job_salary_range">
                             <span class="material-input"></span>
                         </div>   

@@ -13,6 +13,7 @@ $route['insert-job'] = 'jobpost_c/addJob';
 $route['apply-job/(:any)'] = 'home_c/applyJob';
 $route['insert-apply-job'] = 'home_c/addApplyJob';
 
+$route['user_add_fav_job/(:any)'] = 'home_c/add_fav_job';
 
 //**************************ADMIN ROUTE*******************//
 $route['login'] = 'login_c';

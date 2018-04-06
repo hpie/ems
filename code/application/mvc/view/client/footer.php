@@ -192,6 +192,34 @@ if (isset($_SESSION['AppllySuccessfully'])) {
            $('.note-group-select-from-files').remove();
         
     });
+    
+    
+    
+$(".add-fav").click(function(){
+    var id = $(this).attr("data-id");
+    var type = $(this).attr("data-type");
+    var data = {};
+    data['type'] =type;
+     var urlreq = '<?php echo BASE_URL; ?>' + 'user_add_fav_job/' + id;
+                $.ajax({type: "POST",
+                    dataType: "json",
+                    url: urlreq,
+                    data:data,
+                    success: function (_returnData) {
+                        if (_returnData.success = "success"){
+                            if(type == 'fav'){
+                            $(".addfav"+id).hide();
+                            $(".removefav"+id).show();
+                        }else{
+                            $(".removefav"+id).hide();
+                            $(".addfav"+id).show();
+                        }
+                            return false;
+                        }
+                           
+                    }
+                });
+});
 </script>
 </body>
 </html>

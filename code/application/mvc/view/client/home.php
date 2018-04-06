@@ -86,9 +86,21 @@
                                 </div>
                             </div>
                             <div class="pull-right">
-                                <div class="icon">
-                                    <i class="ti-heart"></i>
+                                <?php if($job['isFavourited'] == 0){ ?>
+                                <div class="icon addfav<?php echo $job['row_id']; ?>">
+                                    <i class="ti-heart add-fav" data-type="fav" data-id="<?php echo $job['row_id']; ?>"></i>
                                 </div>
+                                <div class="icon removefav<?php echo $job['row_id']; ?>" style="display:none" >
+                                    <i class="fa fa-heart add-fav" data-type="unfav" data-id="<?php echo $job['row_id']; ?>"></i>
+                                </div>
+                                <?php }else{ ?>
+                                <div class="icon removefav<?php echo $job['row_id']; ?>" >
+                                    <i class="fa fa-heart add-fav" data-type="unfav" data-id="<?php echo $job['row_id']; ?>"></i>
+                                </div>
+                                <div class="icon addfav<?php echo $job['row_id']; ?>" style="display: none">
+                                    <i class="ti-heart add-fav" data-type="fav" data-id="<?php echo $job['row_id']; ?>"></i>
+                                </div>
+                                <?php } ?>
                                 <a href="<?php echo CLIENT_JOB_DETAILS_LINK.$job['row_id']; ?>" class="btn btn-common btn-rm">More Detail</a>
                             </div>
                         </div>
