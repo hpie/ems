@@ -68,6 +68,7 @@ $route['job_posting/insert'] = 'job_posting_c/insert';
 $route['job_posting/detail/(:any)'] = 'job_posting_c/detail';
 $route['job_posting/edit/(:any)'] = 'job_posting_c/edit';
 $route['job_posting/update/(:any)'] = 'job_posting_c/update';
+$route['job_posting/applyuserview/(:any)'] = 'job_posting_c/applyuserview';
 
 
 

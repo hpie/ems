@@ -4,7 +4,7 @@ public $connect;
 	public function getConnection()
 	{
 		if($_SERVER['HTTP_HOST']=='localhost')
-                    $con=mysqli_connect("localhost","root","hpie@edu","cdac_ems");
+                    $con=mysqli_connect("localhost","root","","cdac_ems");
                 else 
                     $con=mysqli_connect("localhost","username","password","dbname"); 
 		// Check connection

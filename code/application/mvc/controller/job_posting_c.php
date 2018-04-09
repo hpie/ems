@@ -72,6 +72,19 @@ class job_posting_c extends Controllers {
 
        exit;
        }
+       public function applyuserview($id) {
+	 	 $Job_posting = $this->job_posting_m->getSingleJobList($id);
+               //echo"<pre>";  print_r($Job_posting);die;
+                 $apply_user = $this->job_posting_m->get_apply_job_user_detail($Job_posting['job_code']);
+//                 echo"<pre>";print_r($apply_user);die;
+	 	 $this->data['result']= $apply_user;
+	 	 //print_r($Job_posting);
+	 	   $this->data['TITLE'] = 'Job Posting Detail';
+	 	 loadview('admin/job_posting/', 'applyuserdetail.php', $this->data);
+       
+
+       exit;
+       }
        public function edit($id) {
         $status = $this->status_m->getstatus();
         $this->data['status'] = $status;

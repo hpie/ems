@@ -37,6 +37,24 @@ class Job_posting_m extends Models {
         }
         return false;
     }  
+    public function getSingleJobList($jobId) {
+        $q = "SELECT * FROM job_postings WHERE row_id=$jobId";
+        $result = $this->query->select($q);
+        if($row = $this->query->fetch($result)) {
+            return $row;
+        }
+        return false;
+    }
+    
+     public function get_apply_job_user_detail($job_code) {
+        $q = "SELECT jir.* FROM job_interview_registrations jir WHERE jir.job_code = '$job_code'";
+//        echo $q;die;
+              $result = $this->query->select($q);
+        if ($data = $this->query->fetch_array($result)) {
+            return $data;
+        }
+        return false;
+    } 
     
     public function updateJob_posting($params,$id) {       
         $columnsdesc = $this->updateMaker($params,$id);

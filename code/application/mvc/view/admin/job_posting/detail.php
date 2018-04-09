@@ -1,5 +1,5 @@
 
-<h3>Department Detail
+<h3>Job Detail
 </h3>
 <br />
 <?php //print_r($result); ?>
@@ -10,9 +10,15 @@
             <div class="panel-body">						
                   
                     <div class="form-group col-md-12" >
-                            <label class="col-md-3 control-label">Job Code</label>                               
-                            <div class="col-md-9">
+                            <label class="col-md-2 control-label">Job Code</label>                               
+                            <div class="col-md-8">
                                  <?php echo $row['job_code'] ?> 
+                            </div>
+                            <div class="col-md-2" style="float: right">
+                                <a href="<?php echo BASE_URL."job_posting/applyuserview/".$row['row_id']; ?>" class="btn btn-success btn-sm btn-icon icon-left">
+                            <i class="entypo-eye"></i>
+                            Apply user
+                        </a>
                             </div>
                     </div>
                     <div class="form-group col-md-12" >
