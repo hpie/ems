@@ -73,7 +73,11 @@ CREATE TABLE IF NOT EXISTS `job_interview_registrations` (
 --
 ALTER TABLE `job_interview_registrations`
   ADD PRIMARY KEY (`row_id`),
-  ADD KEY `job_interview_candicate_code` (`candicate_code`);
+  ADD KEY (`candicate_code`),
+  ADD KEY (`job_code`),
+  ADD KEY (`prefred_schedule_id`),
+  ADD KEY (`alloted_schedule_id`),
+  ADD KEY (`department_code`);
 
 --
 -- AUTO_INCREMENT for dumped tables

@@ -10,9 +10,9 @@ class Job_center_m extends Models {
     public function getcenter() {
         $q = "SELECT p.*,s.status_title,s.status_code,st.state_code,st.state_name,ct.city_id,ct.city_name 
              FROM  job_interview_centers p
-             LEFT JOIN cdac_states st ON st.state_code=p.center_state
-             LEFT JOIN cdac_cities ct ON ct.city_id=p.center_city
-             LEFT JOIN cdac_status s ON p.status=s.status_code";
+             LEFT JOIN ems_states st ON st.state_code=p.center_state
+             LEFT JOIN ems_cities ct ON ct.city_id=p.center_city
+             LEFT JOIN ems_status s ON p.status=s.status_code";
         $result = $this->query->select($q);
         if ($data = $this->query->fetch_array($result)) {
             return $data;
@@ -30,9 +30,9 @@ class Job_center_m extends Models {
      public function get_center_detail($id) {
         $q = "SELECT p.*,s.status_title,s.status_code,st.state_code,st.state_name,ct.city_id,ct.city_name 
              FROM  job_interview_centers p
-             LEFT JOIN cdac_states st ON st.state_code=p.center_state
-             LEFT JOIN cdac_cities ct ON ct.city_id=p.center_city
-             LEFT JOIN cdac_status s ON p.status=s.status_code WHERE p.center_code='$id'";;
+             LEFT JOIN ems_states st ON st.state_code=p.center_state
+             LEFT JOIN ems_cities ct ON ct.city_id=p.center_city
+             LEFT JOIN ems_status s ON p.status=s.status_code WHERE p.center_code='$id'";;
               $result = $this->query->select($q);
         if ($data = $this->query->fetch_array($result)) {
             return $data;

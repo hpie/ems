@@ -55,7 +55,10 @@ CREATE TABLE IF NOT EXISTS `job_interview_schedules` (
 -- Indexes for table `job_interview_schedules`
 --
 ALTER TABLE `job_interview_schedules`
-  ADD PRIMARY KEY (`interview_schedule_id`);
+  ADD PRIMARY KEY (`interview_schedule_id`),
+  ADD KEY (`job_code`),
+  ADD KEY (`department_code`),
+  ADD KEY (`center_code`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -76,4 +79,4 @@ ALTER TABLE `job_interview_schedules`
 ALTER TABLE `job_interview_schedules`
   ADD CONSTRAINT `job_interview_schedules_ibfk_1` FOREIGN KEY (`job_code`) REFERENCES `job_postings` (`job_code`),
   ADD CONSTRAINT `job_interview_schedules_ibfk_2` FOREIGN KEY (`department_code`) REFERENCES `ems_departments` (`department_code`),
-  ADD CONSTRAINT `job_interview_schedules_ibfk_2` FOREIGN KEY (`center_code`) REFERENCES `job_interview_centers` (`center_code`);
+  ADD CONSTRAINT `job_interview_schedules_ibfk_3` FOREIGN KEY (`center_code`) REFERENCES `job_interview_centers` (`center_code`);

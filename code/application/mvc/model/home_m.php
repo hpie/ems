@@ -10,10 +10,10 @@ class home_m extends Models {
     
     public function getJobList($offset=false,$favkey) {
         $q = "SELECT jp.*, CASE    
-                    WHEN jf.job_favourite_id IS NULL THEN 0   
+                    WHEN jf.job_favourites_id IS NULL THEN 0   
                     ELSE 1 END AS isFavourited"
                 . " FROM job_postings jp"
-                . " LEFT JOIN job_favourite jf					
+                . " LEFT JOIN job_favourites jf					
                     ON jf.job_code = jp.job_code AND jf.favkey = '$favkey' "
                 . " ORDER BY row_id DESC LIMIT 4 OFFSET $offset";
         $result = $this->query->select($q);
@@ -61,14 +61,14 @@ class home_m extends Models {
     public function addFavouriteJob($params) {
         $columns = $this->insertMaker($params, $values);
         if ($columns) {
-            $q = "INSERT INTO job_favourite($columns) values($values)";
+            $q = "INSERT INTO job_favourites($columns) values($values)";
             $jobId = $this->query->insert($q);
             return $jobId;
         }
         return FALSE;
     }
      public function deleteFavouriteJob($job_code, $favkey) {
-        $query = "DELETE FROM job_favourite WHERE job_code ='$job_code' AND favkey ='$favkey'";
+        $query = "DELETE FROM job_favourites WHERE job_code ='$job_code' AND favkey ='$favkey'";
         $result = $this->query->select($query);
         if ($result == 1) {
             //return $this->getPlacesDetails($id, $userid);

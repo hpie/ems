@@ -10,9 +10,9 @@ class Department_m extends Models {
     public function getDepartment() {
         $q = "SELECT p.*,st.state_name,st.state_code,s.status_title,s.status_code,ct.city_id,ct.city_name 
              FROM ems_departments p
-             LEFT JOIN cdac_states st ON p.department_state=st.state_code
-             LEFT JOIN cdac_cities ct ON p.department_city=ct.city_id 
-             LEFT JOIN cdac_status s ON p.status=s.status_code";
+             LEFT JOIN ems_states st ON p.department_state=st.state_code
+             LEFT JOIN ems_cities ct ON p.department_city=ct.city_id 
+             LEFT JOIN ems_status s ON p.status=s.status_code";
         $result = $this->query->select($q);
         if ($data = $this->query->fetch_array($result)) {
             return $data;
@@ -22,7 +22,7 @@ class Department_m extends Models {
      public function insert($params) {
         $columns = $this->insertMaker($params, $values);
         if ($columns) {
-            $q = "INSERT INTO cdac_cities($columns) values($values)";
+            $q = "INSERT INTO ems_cities($columns) values($values)";
             return $this->query->insert($q);
         }
         return FALSE;
@@ -30,9 +30,9 @@ class Department_m extends Models {
      public function getDepartmentdetail($id) {
         $q = "SELECT p.*,st.state_name,st.state_code,s.status_title,s.status_code,ct.city_id,ct.city_name 
              FROM ems_departments p
-             LEFT JOIN cdac_states st ON p.department_state=st.state_code
-             LEFT JOIN cdac_cities ct ON p.department_city=ct.city_id 
-             LEFT JOIN cdac_status s ON p.status=s.status_code WHERE p.department_code='$id'";
+             LEFT JOIN ems_states st ON p.department_state=st.state_code
+             LEFT JOIN ems_cities ct ON p.department_city=ct.city_id 
+             LEFT JOIN ems_status s ON p.status=s.status_code WHERE p.department_code='$id'";
         $result = $this->query->select($q);
         if ($data = $this->query->fetch_array($result)) {
             return $data;

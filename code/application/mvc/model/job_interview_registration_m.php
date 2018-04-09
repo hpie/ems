@@ -13,7 +13,7 @@ class Job_interview_registration_m extends Models {
              FROM  job_interview_registrations p
              LEFT JOIN ems_departments dep ON p.department_code=dep.department_code
              LEFT JOIN job_postings job ON p.job_code=job.row_id
-             LEFT JOIN cdac_status s ON p.status=s.status_code";
+             LEFT JOIN ems_status s ON p.status=s.status_code";
         $result = $this->query->select($q);
         if ($data = $this->query->fetch_array($result)) {
             return $data;
@@ -34,7 +34,7 @@ class Job_interview_registration_m extends Models {
              FROM  job_interview_registrations p
              LEFT JOIN ems_departments dep ON p.department_code=dep.department_code
              LEFT JOIN job_postings job ON p.offer_id=job.row_id
-             LEFT JOIN cdac_status s ON p.status=s.status_code WHERE p.employee_id='$id'";
+             LEFT JOIN ems_status s ON p.status=s.status_code WHERE p.employee_id='$id'";
         $result = $this->query->select($q);
         if ($data = $this->query->fetch_array($result)) {
             return $data;

@@ -64,7 +64,9 @@ CREATE TABLE IF NOT EXISTS `ems_employees` (
 -- Indexes for table `ems_employees`
 --
 ALTER TABLE `ems_employees`
-  ADD PRIMARY KEY (`employee_id`);
+  ADD PRIMARY KEY (`employee_id`),
+  ADD KEY (`candicate_code`),
+  ADD KEY (`offer_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables

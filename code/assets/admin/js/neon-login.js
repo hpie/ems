@@ -16,7 +16,7 @@ var neonLogin = neonLogin || {};
         {
             var root = location.protocol + '//' + location.host;
             if(root=='http://localhost'){
-                    root=location.protocol + '//' + location.host+'/ems/code';
+                    root=location.protocol + '//' + location.host+'/code';
             }
             neonLogin.$container = $("#form_login");				
             // Login Form & Validation

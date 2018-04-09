@@ -8,7 +8,7 @@ class status_m extends Models {
         $this->query = new Query();
     }    
     public function getstatus() {
-        $q = "SELECT * FROM cdac_status";
+        $q = "SELECT * FROM ems_status";
         $result = $this->query->select($q);
         if ($data = $this->query->fetch_array($result)) {
             return $data;

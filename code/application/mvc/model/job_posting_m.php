@@ -11,7 +11,7 @@ class Job_posting_m extends Models {
         $q = "SELECT p.*,s.status_title,s.status_code,dep.department_code,dep.department_title 
              FROM  job_postings p
              LEFT JOIN ems_departments dep ON dep.department_code=p.department_code
-             LEFT JOIN cdac_status s ON p.status=s.status_code";
+             LEFT JOIN ems_status s ON p.status=s.status_code";
         $result = $this->query->select($q);
         if ($data = $this->query->fetch_array($result)) {
             return $data;
@@ -30,7 +30,7 @@ class Job_posting_m extends Models {
         $q = "SELECT p.*,s.status_title,s.status_code,dep.department_code,dep.department_title 
              FROM  job_postings p
              LEFT JOIN ems_departments dep ON dep.department_code=p.department_code
-             LEFT JOIN cdac_status s ON p.status=s.status_code";
+             LEFT JOIN ems_status s ON p.status=s.status_code";
               $result = $this->query->select($q);
         if ($data = $this->query->fetch_array($result)) {
             return $data;

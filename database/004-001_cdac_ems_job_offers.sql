@@ -55,7 +55,11 @@ CREATE TABLE IF NOT EXISTS `job_offers` (
 -- Indexes for table `job_offers`
 --
 ALTER TABLE `job_offers`
-  ADD PRIMARY KEY (`offer_id`);
+  ADD PRIMARY KEY (`offer_id`),
+  ADD  KEY (`candicate_code`),
+  ADD  KEY (`job_code`),
+  ADD  KEY (`department_code`),
+  ADD  KEY (`branch_code`)  ;
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -65,7 +69,7 @@ ALTER TABLE `job_offers`
 -- AUTO_INCREMENT for table `job_offers`
 --
 ALTER TABLE `job_offers`
-  MODIFY `row_id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `offer_id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
@@ -75,6 +79,6 @@ ALTER TABLE `job_offers`
 --
 ALTER TABLE `job_offers`
   ADD CONSTRAINT `job_offers_ibfk_1` FOREIGN KEY (`candicate_code`) REFERENCES `job_interview_registrations` (`candicate_code`),
-  ADD CONSTRAINT `job_offers_ibfk_2` FOREIGN KEY (`job_code`) REFERENCES `job_postings` (`job_code`)
+  ADD CONSTRAINT `job_offers_ibfk_2` FOREIGN KEY (`job_code`) REFERENCES `job_postings` (`job_code`),
   ADD CONSTRAINT `job_offers_ibfk_3` FOREIGN KEY (`department_code`) REFERENCES `ems_departments` (`department_code`),
   ADD CONSTRAINT `job_offers_ibfk_4` FOREIGN KEY (`branch_code`) REFERENCES `ems_department_branches` (`branch_code`);
