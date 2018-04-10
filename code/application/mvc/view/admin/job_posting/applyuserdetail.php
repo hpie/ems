@@ -10,14 +10,16 @@ if(!empty($result)){
     <div class="col-md-12">
         <div class="panel panel-primary" data-collapsed="0">
             <div class="panel-body">						
-                  
-                    <div class="form-group col-md-12" >
-                            <label class="col-md-3 control-label">Candidate Code</label>                               
-                            <div class="col-md-9">
-                                 <?php echo $row['candicate_code'] ?> 
-                            </div>
-                            
-                    </div>
+                <div style=""><h4><b>Personal Details</b></h4>
+                    <hr>
+                    </div> 
+                <div class="form-group col-md-12" >
+                        <label class="col-md-3 control-label">Candidate Code</label>                               
+                        <div class="col-md-9">
+                             <?php echo $row['candicate_code'] ?> 
+                        </div>
+
+                </div>
                 <div class="form-group col-md-12" >
                             <label class="col-md-3 control-label">Job Code</label>                               
                             <div class="col-md-9">
@@ -41,7 +43,9 @@ if(!empty($result)){
                     <div class="form-group col-md-12" >
                             <label class="col-md-3 control-label">Candidate DOB</label>                               
                             <div class="col-md-9">
-                                 <?php echo $row['candicate_dob'] ?> 
+                                <?php $originalDate = $row['candicate_dob'];
+$newDate = date("d-m-Y", strtotime($originalDate)); ?>
+                                 <?php echo $newDate; ?> 
                             </div>
                     </div>
                     <div class="form-group col-md-12" >
@@ -79,6 +83,10 @@ if(!empty($result)){
                         <div class="col-md-9">
                              <?php echo $row['candicate_aadhaar'] ?>
                            </div>
+                    </div>
+                
+                <div style=""><h4><b>Address Details</b></h4>
+                    <hr>
                     </div>
                     <div class="form-group col-md-12">
                             <label class="col-md-3 control-label">Address 1</label>                              
