@@ -113,6 +113,7 @@
 <script type="text/javascript" src="<?php echo CLIENT_ASSETS; ?>js/jquery.themepunch.tools.min.js"></script>
 <script src="<?php echo CLIENT_ASSETS; ?>js/summernote.js" type="text/javascript"></script>
 <script src="<?php echo BASE_URL; ?>assets/pnotify/dist/pnotifyAdmin.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
     $(document).ready(function () {        
         $("#<?php echo $offset.'joblist'; ?>").addClass( "activeLiA" );
@@ -214,6 +215,55 @@ $(".add-fav").click(function(){
                             $(".removefav"+id).hide();
                             $(".addfav"+id).show();
                         }
+                            return false;
+                        }
+                           
+                    }
+                });
+});
+$( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  
+  $("#tags").keypress(function(){
+   
+     var urlreq = '<?php echo BASE_URL; ?>' + 'get_job_key_word';
+                $.ajax({type: "POST",
+                    dataType: "json",
+                    url: urlreq,
+                    success: function (_returnData) {
+                        if (_returnData.success = "success"){
+                            console.log(_returnData.Result);
+                            var availableTags = _returnData.Result;
+                                $( "#tags" ).autocomplete({
+                                  source: availableTags
+                                });
                             return false;
                         }
                            

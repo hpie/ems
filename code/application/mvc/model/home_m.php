@@ -11,11 +11,16 @@ class home_m extends Models {
     public function getJobList($offset=false,$favkey) {
         $q = "SELECT jp.*, CASE    
                     WHEN jf.job_favourites_id IS NULL THEN 0   
-                    ELSE 1 END AS isFavourited"
+                    ELSE 1 END AS isFavourited "
                 . " FROM job_postings jp"
                 . " LEFT JOIN job_favourites jf					
                     ON jf.job_code = jp.job_code AND jf.favkey = '$favkey' "
-                . " ORDER BY row_id DESC LIMIT 4 OFFSET $offset";
+                . " ORDER BY row_id DESC ";
+//        echo $offset;die;
+        if (!empty($offset)){
+            	$q .= " LIMIT 4 OFFSET $offset";
+        } 
+        
         $result = $this->query->select($q);
         if($data = $this->query->fetch_array($result)) {
             return $data;
@@ -27,6 +32,14 @@ class home_m extends Models {
         $result = $this->query->select($q);
         if($row = $this->query->fetch($result)) {
             return $row;
+        }
+        return false;
+    }
+    public function getAllJobKeyword() {
+        $q = "SELECT job_keywords.title FROM job_keywords";
+        $result = $this->query->select($q);
+        if($data = $this->query->fetch_array($result)) {
+            return $data;
         }
         return false;
     }

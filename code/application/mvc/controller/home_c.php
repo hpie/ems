@@ -16,6 +16,7 @@ class home_c extends Controllers {
     }
     
     public function home($offset) {
+        
         if(isset($_COOKIE['FAV_JOB'])){
             $cookie_value = $_COOKIE['FAV_JOB'];
         }else{
@@ -31,10 +32,16 @@ class home_c extends Controllers {
         $this->data['jobList'] = $jobList;
         $this->data['totalPage'] = $totalPage;
         $this->data['countRecord'] = $countRecord;
+        $this->data['TITLE'] = HOME; 
+        if(!empty($offset)){
         $this->data['offset'] = $offset;
-        $this->data['offset2'] = $offset+OFFSET;
-        $this->data['TITLE'] = HOME;      
-        loadviewClient('client/', 'home.php', $this->data);
+        $this->data['offset2'] = $offset + OFFSET;
+        }else {
+            $offset = 0;
+        $this->data['offset'] = $offset;
+        $this->data['offset2'] = $offset + OFFSET;
+        }
+         loadviewClient('client/', 'home.php', $this->data);
     }
     
     public function jobDetails($jobId) { 
@@ -97,5 +104,21 @@ class home_c extends Controllers {
         echo json_encode($result);
         die;  
         }
+    }
+    public function job_key_word() { 
+        
+        $job_keyword=$this->home_m->getAllJobKeyword();
+//        echo '<pre>';print_r($job_keyword);die;
+        $newarray = array();
+        foreach ($job_keyword as $value) {
+            array_push($newarray, $value['title']);
+        }
+//        echo '<pre>';print_r($newarray);die;
+        $result=array(); 
+        $result['success'] = 'success';
+        $result['Result'] = $newarray;
+        echo json_encode($result);
+        die;  
+        
     }
 }  

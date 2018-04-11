@@ -40,6 +40,7 @@
         <link href="<?php echo CLIENT_ASSETS; ?>css/loginpopup.css" rel="stylesheet" type="text/css"/>
         <link href="<?php echo BASE_URL; ?>assets/pnotify/dist/pnotifiadmin.css" rel="stylesheet"> 
         
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         
         <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">-->
          

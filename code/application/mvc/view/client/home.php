@@ -14,7 +14,7 @@
                         <div class="row">
                             <div class="col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="job title / keywords / company name">
+                                    <input class="form-control" id="tags" type="text" placeholder="job title / keywords / company name">
                                     <i class="ti-time"></i>
                                 </div>
                             </div>
