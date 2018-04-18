@@ -43,6 +43,14 @@ class home_m extends Models {
         }
         return false;
     }
+    public function getAllJobCities() {
+        $q = "SELECT ems_cities.city_name FROM ems_cities";
+        $result = $this->query->select($q);
+        if($data = $this->query->fetch_array($result)) {
+            return $data;
+        }
+        return false;
+    }
     
      public function getSingleApplyJobDetails($jobId,$email,$phone) {
         $q = "SELECT * FROM job_interview_registrations WHERE job_code='".$jobId."' AND candicate_email = '".$email."' OR candicate_phone = '".$phone."'";

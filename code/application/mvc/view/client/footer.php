@@ -221,37 +221,37 @@ $(".add-fav").click(function(){
                     }
                 });
 });
-$( function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  } );
+//$( function() {
+//    var availableTags = [
+//      "ActionScript",
+//      "AppleScript",
+//      "Asp",
+//      "BASIC",
+//      "C",
+//      "C++",
+//      "Clojure",
+//      "COBOL",
+//      "ColdFusion",
+//      "Erlang",
+//      "Fortran",
+//      "Groovy",
+//      "Haskell",
+//      "Java",
+//      "JavaScript",
+//      "Lisp",
+//      "Perl",
+//      "PHP",
+//      "Python",
+//      "Ruby",
+//      "Scala",
+//      "Scheme"
+//    ];
+//    $( "#tags" ).autocomplete({
+//      source: availableTags
+//    });
+//  } );
   
-  $("#tags").keypress(function(){
+  $("#jobtitletags").keypress(function(){
    
      var urlreq = '<?php echo BASE_URL; ?>' + 'get_job_key_word';
                 $.ajax({type: "POST",
@@ -261,7 +261,27 @@ $( function() {
                         if (_returnData.success = "success"){
                             console.log(_returnData.Result);
                             var availableTags = _returnData.Result;
-                                $( "#tags" ).autocomplete({
+                                $( "#jobtitletags" ).autocomplete({
+                                  source: availableTags
+                                });
+                            return false;
+                        }
+                           
+                    }
+                });
+});
+
+  $("#jobcitiestags").keypress(function(){
+   
+     var urlreq = '<?php echo BASE_URL; ?>' + 'get_job_cities';
+                $.ajax({type: "POST",
+                    dataType: "json",
+                    url: urlreq,
+                    success: function (_returnData) {
+                        if (_returnData.success = "success"){
+                            console.log(_returnData.Result);
+                            var availableTags = _returnData.Result;
+                                $( "#jobcitiestags" ).autocomplete({
                                   source: availableTags
                                 });
                             return false;

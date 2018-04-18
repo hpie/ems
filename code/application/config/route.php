@@ -16,6 +16,7 @@ $route['insert-apply-job'] = 'home_c/addApplyJob';
 $route['user_add_fav_job/(:any)'] = 'home_c/add_fav_job';
 
 $route['get_job_key_word'] = 'home_c/job_key_word';
+$route['get_job_cities'] = 'home_c/job_cities';
 
 //**************************ADMIN ROUTE*******************//
 $route['login'] = 'login_c';

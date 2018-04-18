@@ -121,4 +121,20 @@ class home_c extends Controllers {
         die;  
         
     }
+    public function job_cities() { 
+        
+        $job_cities=$this->home_m->getAllJobCities();
+//        echo '<pre>';print_r($job_keyword);die;
+        $newarray = array();
+        foreach ($job_cities as $value) {
+            array_push($newarray, $value['city_name']);
+        }
+//        echo '<pre>';print_r($newarray);die;
+        $result=array(); 
+        $result['success'] = 'success';
+        $result['Result'] = $newarray;
+        echo json_encode($result);
+        die;  
+        
+    }
 }  

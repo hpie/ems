@@ -14,13 +14,13 @@
                         <div class="row">
                             <div class="col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control" id="tags" type="text" placeholder="job title / keywords / company name">
+                                    <input class="form-control" id="jobtitletags" type="text" placeholder="job title / keywords / company name">
                                     <i class="ti-time"></i>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control" type="email" placeholder="city / province / zip code">
+                                    <input class="form-control" type="email" id="jobcitiestags" placeholder="city / province / zip code">
                                     <i class="ti-location-pin"></i>
                                 </div>
                             </div>
