@@ -16,7 +16,7 @@ class home_c extends Controllers {
     }
     
     public function home($offset) {
-        
+//        echo"<pre>";print_r($offset);die;
         if(isset($_COOKIE['FAV_JOB'])){
             $cookie_value = $_COOKIE['FAV_JOB'];
         }else{
@@ -26,7 +26,8 @@ class home_c extends Controllers {
         }
 //        echo $set;die;
         $countRecord=$this->home_m->countPage();
-        $totalPage=round(($countRecord/OFFSET),0,PHP_ROUND_HALF_UP);        
+        $totalPage=round(($countRecord/OFFSET),0,PHP_ROUND_HALF_UP);  
+        
         $jobList=$this->home_m->getJobList($offset,$cookie_value);
 //        echo"<pre>";print_r($jobList);die;
         $this->data['jobList'] = $jobList;

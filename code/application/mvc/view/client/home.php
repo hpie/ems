@@ -3,6 +3,12 @@
        background:#ff4f57!important;
        color: #fff!important;
     }
+    .ti-heart{
+        line-height: 2.5;
+    }
+    .fa-heart{
+        line-height: 2.5;
+    }
 </style>
 <div class="search-container">
     <div class="container">

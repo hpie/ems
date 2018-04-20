@@ -16,10 +16,13 @@ class home_m extends Models {
                 . " LEFT JOIN job_favourites jf					
                     ON jf.job_code = jp.job_code AND jf.favkey = '$favkey' "
                 . " ORDER BY row_id DESC ";
-//        echo $offset;die;
+       
         if (!empty($offset)){
+//             echo $offset;die;
             	$q .= " LIMIT 4 OFFSET $offset";
-        } 
+        } else{
+            $q .= " LIMIT 4";
+        }
         
         $result = $this->query->select($q);
         if($data = $this->query->fetch_array($result)) {

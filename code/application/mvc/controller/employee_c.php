@@ -1,4 +1,4 @@
-<?php
+F<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class employee_c extends Controllers {
@@ -46,25 +46,22 @@ class employee_c extends Controllers {
 
 
 	 public function invoke() {
-	 	 $emp = $this->employee_m->getemployee();
-
-     $this->data['result']= $emp;
-	 	 $this->data['emp']= $emp;
-	 	 //print_r($Job_posting);
-	 	   $this->data['TITLE'] = 'Employee List';
-	 	 loadview('admin/employee/', 'employee.php', $this->data);
-       
-
+            $emp = $this->employee_m->getemployee();
+            $this->data['result']= $emp;
+            $this->data['emp']= $emp;
+            //print_r($Job_posting);
+              $this->data['TITLE'] = 'Employee List';
+            loadview('admin/employee/', 'employee.php', $this->data);
        exit;
        }
 	public function detail($id) {
-	 	 $emp = $this->employee_m->getEmployeedetail($id);
-     $this->data['result']= $emp;
-	 	 //print_r($Job_posting);
-	 	   $this->data['TITLE'] = 'Employee Detail';
-	 	 loadview('admin/employee/', 'detail.php', $this->data);
-
-       exit;
+            $emp = $this->employee_m->getEmployeedetail($id);
+            $this->data['result']= $emp;
+            //print_r($Job_posting);
+            $this->data['TITLE'] = 'Employee Detail';
+            loadview('admin/employee/', 'detail.php', $this->data);
+            
+            exit;
        }
        public function edit($id) {
         $emp = $this->employee_m->getEmployeedetail($id);
